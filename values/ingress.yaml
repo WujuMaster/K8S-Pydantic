@@ -1,0 +1,12 @@
+pathType: Prefix
+tls:
+  secretName: <secret-name>
+  hosts:
+    - <hostname>
+name: <ingress-name>
+className: <ingress-class>
+metadata:
+  annotations:
+    <annotation-key>: <annotation-value>
+plugin:
+  name: <plugin-name>

@@ -1,0 +1,6 @@
+replicas: 1
+namespace: default
+image:
+  registry: <container-registry>
+  tag: latest
+version: 1
