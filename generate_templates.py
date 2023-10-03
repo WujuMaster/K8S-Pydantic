@@ -1,3 +1,4 @@
+import os
 import yaml
 
 import schemas as k8s
@@ -14,6 +15,9 @@ OUTPUT_DIR = "templates"
 
 
 if __name__ == "__main__":
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+
     with open(f"{INPUT_DIR}/shared.yaml", "r") as file:
         shared_conf = k8s.SharedConf(**yaml.safe_load(file))
 
